@@ -8,11 +8,15 @@
         body {
             font-family: Arial, sans-serif;
             margin: 20px;
+            background-color: #f4f4f9;
         }
         img {
             max-width: 300px;
             display: block;
             margin: 0 auto;
+        }
+        h1, h2 {
+            text-align: center;
         }
         table {
             width: 100%;
@@ -28,6 +32,9 @@
         }
         form {
             margin-top: 20px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .section {
             margin-bottom: 20px;
@@ -36,9 +43,30 @@
             display: block;
             margin: 5px 0;
         }
+        .section input, .section select {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
+
     <h1>Acquista l'Album "NomeAlbum" di NomeGruppo</h1>
     
     <img src="immagine_gruppo.jpg" alt="Nome Gruppo">
@@ -105,7 +133,7 @@
     
     <h2>Compila il Modulo per l'Acquisto</h2>
     <form action="processa_acquisto.php" method="post">
-        <!-- Dati Personali -->
+        
         <div class="section" id="dati">
             <h3>Dati Personali</h3>
             <label for="nome">Nome:</label>
@@ -124,7 +152,6 @@
             <input type="email" id="email" name="email" required>
         </div>
         
-        <!-- Dati Carta di Credito -->
         <div class="section" id="brani">
             <h3>Informazioni di Pagamento</h3>
             <label for="numero_carta">Numero Carta di Credito:</label>
@@ -145,19 +172,4 @@
             <select id="brano" name="brano" required>
                 <option value="1">Canzone 1</option>
                 <option value="2">Canzone 2</option>
-                <option value="3">Canzone 3</option>
-                <!-- Aggiungere altre canzoni -->
-            </select>
-            
-            <label for="formato">Formato del file:</label>
-            <select id="formato" name="formato" required>
-                <option value="mp3">MP3</option>
-                <option value="flac">FLAC</option>
-                <option value="wav">WAV</option>
-            </select>
-        </div>
-        
-        <button type="submit">Acquista</button>
-    </form>
-</body>
-</html>
+                <option value="3">Canzone
